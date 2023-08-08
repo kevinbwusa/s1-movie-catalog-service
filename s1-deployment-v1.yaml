@@ -39,7 +39,7 @@ spec:
     spec:
       containers:
       - name: s1-movie-catalog-service
-        image: tsrana1/s1-movie-catalog-service:v5 
+        image: kevinbwusa/s1-movie-catalog-service:v5 
         
         ports:
         - name: http
