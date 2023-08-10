@@ -1,4 +1,4 @@
-package com.tsr.s1moviecatalogservice.resorce;
+package com.tsr.s1moviecatalogservice.resource;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -32,7 +32,7 @@ public class MovieCatalogResource {
 		
 		return ratings.getUserRating().stream().map(rating -> {
 			//Movie movie = restTemplate.getForObject("http://s2-movie-info-service:8082/movies/"+rating.getMovieId(), Movie.class);
-			Movie movie = restTemplate.getForObject("http://p2-movie-info-service:5000/api/v1.0/task/id/"+rating.getMovieId(), Movie.class);
+			Movie movie = restTemplate.getForObject("http://s2-movie-info-service:5000/api/v1.0/task/id/"+rating.getMovieId(), Movie.class);
 			return new CatalogItem(movie.getName(), "Film of 2000s", rating.getRating());
 		})
 		.collect(Collectors.toList());

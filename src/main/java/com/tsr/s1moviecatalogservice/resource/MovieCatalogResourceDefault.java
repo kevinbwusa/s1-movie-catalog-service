@@ -1,4 +1,4 @@
-package com.tsr.s1moviecatalogservice.resorce;
+package com.tsr.s1moviecatalogservice.resource;
 
 import java.util.Arrays;
 import java.util.Collections;
